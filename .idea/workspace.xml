@@ -1,7 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea54c9f4-b823-4bdd-be58-efe494ee068c" name="Default" comment="" />
+    <list default="true" id="ea54c9f4-b823-4bdd-be58-efe494ee068c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.cache/autodll-webpack-plugin/development_instance_0_304cad36c23db08a4086ee4fcdb13af0/vendor.55c71291.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.cache/autodll-webpack-plugin/development_instance_0_304cad36c23db08a4086ee4fcdb13af0/vendor.manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/binding.gyp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/binding.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/errors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/render.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/watcher.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/ansi-styles/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/ansi-styles/license" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/ansi-styles/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/ansi-styles/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/chalk/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/chalk/license" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/chalk/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/chalk/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/lib/enoent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/lib/parse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/lib/resolveCommand.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/cross-spawn/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/supports-color/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/supports-color/license" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/supports-color/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/node_modules/supports-color/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/coverage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/install.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/prepublish.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/util/downloadoptions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/util/proxy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/util/useragent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/binding.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/callback_bridge.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/create_string.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/create_string.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/custom_function_bridge.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/custom_function_bridge.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/custom_importer_bridge.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/custom_importer_bridge.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass.gyp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.github/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.github/ISSUE_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/GNUmakefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/SECURITY.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/configure.ac" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/contrib/libsass.spec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/contrib/plugin.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context-example.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context-internal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-doc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function-example.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function-internal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-importer-example.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-importer-internal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-importer.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value-example.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value-internal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-on-darwin.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-on-gentoo.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-on-windows.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-shared-library.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-with-autotools.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-with-makefiles.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-with-mingw.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-with-visual-studio.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/compatibility-plan.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/contributing.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/custom-functions-internal.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/dev-ast-memory.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/implementations.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/plugins.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/setup-environment.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/source-map-internals.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/trace.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/triage.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/unicode.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/extconf.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/base.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/context.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/functions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/values.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass2scss.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/m4/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/m4/m4-ax_cxx_compile_stdcxx_11.m4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/res/resource.rc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/bootstrap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/branding" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-build-libsass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-build-plugin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-compiler" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-deps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-report-coverage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/spec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/tap-driver" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/tap-runner" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/test-leaks.pl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/GNUmakefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_def_macros.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_fwd_decl.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_fwd_decl.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/b64/cencode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/b64/encode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/backtrace.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/base64vlq.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/base64vlq.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/c99func.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cencode.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/check_nesting.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/check_nesting.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/debug.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/debugger.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/json.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/json.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/kwd_arg_macros.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/lexer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/lexer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/mapping.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/memory/SharedPtr.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/memory/SharedPtr.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/operation.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/paths.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/plugins.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/plugins.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/position.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/position.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass2scss.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_util.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_util.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/subset_map.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/subset_map.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/support/libsass.pc.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8/checked.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8/core.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8/unchecked.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8_string.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/utf8_string.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_node.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_paths.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_selector_difference.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_specificity.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_subset_map.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_superselector.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_unification.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/version.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.sln" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.targets" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.vcxproj" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.vcxproj.filters" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_context_wrapper.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_context_wrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/boolean.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/boolean.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/color.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/color.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/error.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/error.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/factory.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/factory.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/list.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/list.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/map.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/map.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/null.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/null.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/number.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/number.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/sass_value_wrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/string.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/string.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/value.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/api.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/binding.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/cli.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/downloadoptions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/errors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/compressed/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/compressed/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/custom-functions/setter-expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/custom-functions/setter.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/custom-functions/string-conversion-expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/custom-functions/string-conversion.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/cwd-include-path/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/cwd-include-path/outside.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/cwd-include-path/root/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/_common.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/_struct.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/_vars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/a.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/a1.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/b.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/b1.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/depth-first/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_arrays_of_importers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_functions_setter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_functions_string_conversion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_data_cb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_error.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_file.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_file_and_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_file_and_data_cb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/extras/my_custom_importer_file_cb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/follow/foo/bar/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/bar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/chained-imports-with-custom-importer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/expected-importer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/file-not-processed-by-loader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/file-processed-by-loader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/foo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-files/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-path/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-path/functions/colorBlue.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-path/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/include-path/lib/vars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/indent/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/indent/index.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/input-directory/sass/_skipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/input-directory/sass/nested/three.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/input-directory/sass/one.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/input-directory/sass/two.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/invalid/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/output-directory/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/precision/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/precision/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/sass-path/expected-orange.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/sass-path/expected-red.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/sass-path/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/sass-path/orange/colors.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/sass-path/red/colors.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/simple/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/simple/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-comments/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-comments/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map-embed/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map-embed/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map/expected.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map/expected.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/main/one.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/main/partials/_one.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/main/partials/_three.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/main/partials/_two.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/main/two.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/sibling/partials/_three.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watcher/sibling/three.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching-dir-01/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching-dir-02/foo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching-dir-02/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching/bar.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching/index.sass" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/watching/white.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/lowlevel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/runtime.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/scripts/util/proxy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/useragent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/watcher.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/node-sass/vendor/win32-x64-57/binding.node" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/node-sass" afterPath="$PROJECT_DIR$/node_modules/.bin/node-sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,11 +377,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="324">
               <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding />
             </state>
@@ -27,7 +391,7 @@
       <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/framework/app/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="648">
               <caret line="47" column="9" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -39,8 +403,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,6 +425,9 @@
       <replace>/source/</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -73,6 +440,7 @@
         <option value="$PROJECT_DIR$/src/framework/layout/Layout.jsx" />
         <option value="$PROJECT_DIR$/webpack.build.config.js" />
         <option value="$PROJECT_DIR$/src/framework/app/App.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -92,6 +460,7 @@
     <option name="width" value="665" />
     <option name="height" value="750" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -107,14 +476,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="manage_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="manage_web" type="462c0819:PsiDirectoryNode" />
+              <item name="manager-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="manager-web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -127,6 +496,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,36 +521,40 @@
       <option name="presentableId" value="Default" />
       <updated>1510930090859</updated>
       <workItem from="1510930092335" duration="4328000" />
+      <workItem from="1511003806978" duration="816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4328000" />
+    <option name="totallyTimeSpent" value="5144000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-8" width="1317" height="784" extended-state="6" />
+    <frame x="47" y="-4" width="1319" height="772" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18258859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44135803" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4396423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -190,101 +564,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/page/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceAdd.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceDetail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="237" column="30" lean-forward="false" selection-start-line="237" selection-start-column="30" selection-end-line="237" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceTaskDetail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="270" column="30" lean-forward="false" selection-start-line="270" selection-start-column="30" selection-end-line="270" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceTaskList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="141" column="30" lean-forward="false" selection-start-line="141" selection-start-column="30" selection-end-line="141" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/routeConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/layout/Layout.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/echarts-for-react/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.build.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="324">
           <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
@@ -292,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/app/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
+        <state relative-caret-position="648">
           <caret line="47" column="9" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -302,8 +584,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceAdd.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceDetail.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="237" column="30" lean-forward="false" selection-start-line="237" selection-start-column="30" selection-end-line="237" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceTaskDetail.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="270" column="30" lean-forward="false" selection-start-line="270" selection-start-column="30" selection-end-line="270" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/source/interface/InterfaceTaskList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="141" column="30" lean-forward="false" selection-start-line="141" selection-start-column="30" selection-end-line="141" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/routeConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/layout/Layout.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/echarts-for-react/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.build.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/app/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="47" column="9" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
