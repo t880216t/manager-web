@@ -29,34 +29,39 @@ class Layout extends React.Component {
                 path: '/home',
                 icon: 'dashboard'
             },
-            /**{
-                name: '功能菜单',
+            {
+                name: '测试case',
                 icon: 'star',
                 path: 'demo-empty',
                 children: [
                     {
-                        name: '正在进行的任务',
-                        path: '/source/table-demo',
+                        name: '上传case文件',
+                        path: '/source/case-upload',
                         icon: 'circle'
                     },
                     {
+                        name: 'case列表',
+                        path: '/source/case-list',
+                        icon: 'circle'
+                    },
+                    /**{
                         name: '已完成的任务',
                         path: '/source/recent-table',
                         icon: 'circle'
                     },
 
-                    {
-                        name: 'info card demo',
-                        path: '/source/info-card-demo',
-                        icon: 'circle'
-                    },
+                     {
+                         name: 'info card demo',
+                         path: '/source/info-card-demo',
+                         icon: 'circle'
+                     },
                      {
                          name: 'upload demo',
                          path: '/source/upload-demo',
                          icon: 'circle'
-                     },
+                     },**/
                 ]
-            },**/
+            },
             {
                 name: '接口自动化',
                 icon: 'star',

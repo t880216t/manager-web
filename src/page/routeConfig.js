@@ -7,16 +7,22 @@ export default [
             })
         }
     },
-
-    // demo
-    // {
-    //     path: '/source/table-demo',
-    //     getComponent: (location, cb) => {
-    //         require.ensure([], (require) => {
-    //             cb(null, require('./source/table-demo/TableDemo.jsx'))
-    //         })
-    //     }
-    // },
+    {
+        path: '/source/case-upload',
+        getComponent: (location, cb) => {
+            require.ensure([], (require) => {
+                cb(null, require('./source/case/CaseUpload.jsx'))
+            })
+        }
+    },
+    {
+        path: '/source/case-list',
+        getComponent: (location, cb) => {
+            require.ensure([], (require) => {
+                cb(null, require('./source/case/CaseList.jsx'))
+            })
+        }
+    },
     // {
     //     path: '/source/recent-table',
     //     getComponent: (location, cb) => {
@@ -94,4 +100,3 @@ export default [
         }
     }
 ]
-

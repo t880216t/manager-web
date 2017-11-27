@@ -50,7 +50,7 @@ class Login extends React.Component {
                 loading: true
             })
             var par = "username="+values.userName+"&password="+values.password;
-            fetch('http://ownerworld.win:5000/signin',{
+            fetch('http://192.168.1.101:5000/signin',{
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -93,7 +93,7 @@ class Login extends React.Component {
                 loading: true
             })
             var par = "username="+values.userName+"&password="+values.password+"&email="+values.email;
-            fetch('http://ownerworld.win:5000/register',{
+            fetch('http://192.168.1.101:5000/register',{
                 method: "POST",
                 mode: "cors",
                 headers: {

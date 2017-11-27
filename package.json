@@ -34,6 +34,8 @@
     "react-dom": "^15.6.1",
     "react-fileupload": "^2.4.0",
     "react-router": "^2.6.1",
+    "rsuite": "^2.0.10",
+    "rsuite-table": "^2.0.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

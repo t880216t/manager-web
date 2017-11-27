@@ -36,7 +36,7 @@ class InterfaceList extends React.Component{
 
     fetchList=()=>{
         var par = ""
-        fetch('http://ownerworld.win:5000/interfaceTaskList',{
+        fetch('http://192.168.1.101:5000/interfaceTaskList',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -83,7 +83,7 @@ class InterfaceList extends React.Component{
     //生成脚本
     fetchScript =(entry)=>{
         var par = "entry="+entry
-        fetch('http://ownerworld.win:5000/build',{
+        fetch('http://192.168.1.101:5000/build',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -126,7 +126,7 @@ class InterfaceList extends React.Component{
     }
 
     getReportUrl=(entry,task_status)=>{
-        const url = "http://ownerworld.win:5000/static/interface_auto/test_src/"+entry+"/result/result.html"
+        const url = "http://192.168.1.101:5000/static/interface_auto/test_src/"+entry+"/result/result.html"
         if (task_status === 3){
             return(<a href={url} target="_blank">查看报告</a>)
         }
