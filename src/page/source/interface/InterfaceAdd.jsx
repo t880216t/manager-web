@@ -14,6 +14,7 @@ class InterfaceAdd extends React.Component{
         test_name:'',
         path:'',
         method:'post',
+        datatype:'test',
         parms:",,,0,",
         verif_code:'0',
         need_save_response:'0',
@@ -29,6 +30,11 @@ class InterfaceAdd extends React.Component{
     //请求方式
     handleMethodChange = (e) => {
         this.setState({ method: e.target.value },()=>{console.log('method',this.state.method)});
+    }
+
+    //数据类型
+    handleDatatypeChange = (e) => {
+        this.setState({ datatype: e.target.value },()=>{console.log('method',this.state.datatype)});
     }
 
     //所属项目
@@ -49,9 +55,9 @@ class InterfaceAdd extends React.Component{
 
     //发送数据
     fetchAdd = () =>{
-        var par = "test_name="+this.state.test_name+'&path='+this.state.path+'&method='+this.state.method+'&parms='+this.state.parms+'&verif_code='+this.state.verif_code+'&need_save_response='+this.state.need_save_response+'&need_verif_value='+this.state.need_verif_value+'&verif_key='+this.state.verif_key+'&verif_value_from_file='+this.state.verif_value_from_file+'&verif_value='+this.state.verif_value+'&test_description='+this.state.test_description+'&project='+this.state.project
+        var par = "test_name="+this.state.test_name+'&path='+this.state.path+'&method='+this.state.method+'&parms='+this.state.parms+'&verif_code='+this.state.verif_code+'&need_save_response='+this.state.need_save_response+'&need_verif_value='+this.state.need_verif_value+'&verif_key='+this.state.verif_key+'&verif_value_from_file='+this.state.verif_value_from_file+'&verif_value='+this.state.verif_value+'&test_description='+this.state.test_description+'&project='+this.state.project+'&datatype='+this.state.datatype
         console.log('_par:',par)
-        fetch('http://192.168.1.101:5000/addInterface',{
+        fetch('http://192.168.0.1:5000/addInterface',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -160,7 +166,7 @@ class InterfaceAdd extends React.Component{
     //获取联想词
     fetchAutoCompleteWords = () =>{
         var par = "project="+this.state.project
-        fetch('http://192.168.1.101:5000/getAutocompleteWords',{
+        fetch('http://192.168.0.1:5000/getAutocompleteWords',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -288,7 +294,7 @@ class InterfaceAdd extends React.Component{
     }
 
     render(){
-        const { method,project } = this.state;
+        const { method,project,datatype } = this.state;
         const parms_items =this.state.parms.split("|~|")
         return(
             <Page title="新建用例数据" loading={this.state.isLoading} >
@@ -310,6 +316,20 @@ class InterfaceAdd extends React.Component{
                                     <Select.Option value="mic_oss_app">MIC OSS APP</Select.Option>
 
                                 </Select>
+                            </div>
+                        </div>
+
+                        <div style={styles.input_box}>
+                            <div style={styles.input_box_font}>
+                                <span style={styles.input_box_font_text}>
+                                    <p style={{color:'red',marginRight:5}}>*</p>数据类型:
+                                </span>
+                            </div>
+                            <div style={{display:'flex',flexDirection:'row',flex:6}}>
+                                <Radio.Group value={datatype} onChange={this.handleDatatypeChange}>
+                                    <Radio.Button value="test">测试版数据</Radio.Button>
+                                    <Radio.Button value="release">正式版数据</Radio.Button>
+                                </Radio.Group>
                             </div>
                         </div>
 

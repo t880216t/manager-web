@@ -21,7 +21,9 @@ class InterfaceList extends React.Component{
         isShowCloneModal:false,
         cloneEntry:'',
         clone_task_name:'',
-        project:'mic_buyer_app'
+        project:'mic_buyer_app',
+        datatype:'test',
+
 
     }
 
@@ -38,9 +40,14 @@ class InterfaceList extends React.Component{
         this.setState({ project: value },()=>{this.fetchList()});
     }
 
+    //数据类型
+    handleDatatypeChange = (value) => {
+        this.setState({ datatype: value },()=>{this.fetchList()});
+    }
+
     fetchList=()=>{
-        var par = "entry=0&project="+this.state.project
-        fetch('http://192.168.1.101:5000/interfaceList',{
+        var par = "entry=0&project="+this.state.project+'&datatype='+this.state.datatype
+        fetch('http://192.168.0.1:5000/interfaceList',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -129,7 +136,7 @@ class InterfaceList extends React.Component{
     //生成测试任务
     fetchTask =()=>{
         var par = "entry="+this.state.selectedRowEntry+"&task_name="+this.state.task_name+"&create_user="+this.state.userName+'&base_host='+this.state.base_host
-        fetch('http://192.168.1.101:5000/addInterfaceTask',{
+        fetch('http://192.168.0.1:5000/addInterfaceTask',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -194,7 +201,7 @@ class InterfaceList extends React.Component{
 
     fetchClone=()=>{
         var par = "entry="+this.state.cloneEntry+"&clone_task_name="+this.state.clone_task_name
-        fetch('http://192.168.1.101:5000/cloneInterface',{
+        fetch('http://192.168.0.1:5000/cloneInterface',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -245,7 +252,7 @@ class InterfaceList extends React.Component{
     clickDelete =(entry)=>{
         if(entry){
             var par = "entry="+entry
-            fetch('http://192.168.1.101:5000/deleteInterface',{
+            fetch('http://192.168.0.1:5000/deleteInterface',{
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -283,7 +290,7 @@ class InterfaceList extends React.Component{
     }
 
     render(){
-        const { project,isShowCloneModal,fetch_data,isVisibleModal,isConfirmLoading } = this.state;
+        const { project,isShowCloneModal,fetch_data,isVisibleModal,isConfirmLoading,datatype } = this.state;
         const keys = []
         for (var i = 0 ;i<  fetch_data.length;i++){
             keys.push(i)
@@ -341,6 +348,13 @@ class InterfaceList extends React.Component{
 
                         </Select>
                     </div>
+                    <div style={{marginLeft:20}}>
+                        <Select  defaultValue={datatype} style={{minWidth: 120, height:28}} onChange={this.handleDatatypeChange}>
+                            <Select.Option value="test">测试版参数</Select.Option>
+                            <Select.Option value="release">正式版参数</Select.Option>
+                        </Select>
+                    </div>
+
                     <div style={{flex:1,display:'flex',justifyContent:'flex-end',marginRight:30,}}>
                         <Button style={{marginBottom:20}} onClick={this.handleAdd}>新建用例</Button>
                         <Button style={{marginLeft:10,marginBottom:20}} onClick={this.handleAddScript}>生成任务脚本</Button>
