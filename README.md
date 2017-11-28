@@ -13,7 +13,12 @@ cnpm install -g webpack webpack-dev-server
 
 cnpm install
 
+```
+### 启动项目
+``` bash
 npm run dev
 ```
+浏览器打开地址：http://127.0.0.1:9090
+
 
 基于[antd-admin-boilerplate](https://github.com/myqianlan/antd-admin-boilerplate)做的业务修改，感谢原作者。
