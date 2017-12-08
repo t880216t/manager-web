@@ -42,7 +42,7 @@ class InterfaceDetail extends React.Component{
             entry: entry,
         })
         var par = "entry="+entry
-        fetch('http://192.168.0.1:5000/interfaceList',{
+        fetch('http://127.0.0.1:5000/interfaceList',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -117,7 +117,7 @@ class InterfaceDetail extends React.Component{
     fetchUpdate = () =>{
         var par = 'entry='+this.state.entry+'&test_name='+this.state.test_name+'&path='+this.state.path+'&method='+this.state.method+'&parms='+this.state.parms+'&verif_code='+this.state.verif_code+'&need_save_response='+this.state.need_save_response+'&need_verif_value='+this.state.need_verif_value+'&verif_key='+this.state.verif_key+'&verif_value_from_file='+this.state.verif_value_from_file+'&verif_value='+this.state.verif_value+'&test_description='+this.state.test_description+'&project='+this.state.project+'&datatype='+this.state.datatype
         console.log('_par:',par)
-        fetch('http://192.168.0.1:5000/updateInterface',{
+        fetch('http://127.0.0.1:5000/updateInterface',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -152,7 +152,7 @@ class InterfaceDetail extends React.Component{
     //获取联想词
     fetchAutoCompleteWords = () =>{
         var par = "project="+this.state.project
-        fetch('http://192.168.0.1:5000/getAutocompleteWords',{
+        fetch('http://127.0.0.1:5000/getAutocompleteWords',{
             method: "POST",
             mode: "cors",
             headers: {

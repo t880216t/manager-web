@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Table, Select,Button,message,Popconfirm,Modal,Input} from 'antd';
+import { Table, Select,Button,message,Popconfirm,Modal,Input,Icon,Popover} from 'antd';
 import 'whatwg-fetch';
 import Page from 'framework/page'
 import {local, session} from 'common/util/storage.js'
@@ -36,8 +36,8 @@ class CaseList extends React.Component{
 
 
     fetchList=()=>{
-        var par = "entry=0"
-        fetch('http://192.168.1.101:5000/gettasklist',{
+        var par = "entry=0&userID="+this.state.userID
+        fetch('http://127.0.0.1:5000/gettasklist',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -81,12 +81,22 @@ class CaseList extends React.Component{
             title: 'title',
             dataIndex: 'title',
             key: 'title',
-            render: text => <a style={{marginLeft:30,fontSize:16}}>{text}</a>,
+            render:  (text, record) => {
+                return(
+                    record.status === 2?
+                        <a style={{color:'red',marginLeft:30,fontSize:16}}>{text}</a>
+                        :
+                        record.status === 1?
+                            <a style={{color:'green',marginLeft:30,fontSize:16}}>{text}</a>
+                            :
+                            <a style={{marginLeft:30,fontSize:16}}>{text}</a>
+
+                )}
         }];
 
         return(
             <Page title="case列表" loading={this.state.isLoading}>
-                <Table rowKey="id" columns={columns} dataSource={fetch_data} indentSize={50}/>
+                <Table rowKey="entry" columns={columns} dataSource={fetch_data} indentSize={50} scroll={{ x: '130%', y: 1000 }}  />
             </Page>
         );
     }

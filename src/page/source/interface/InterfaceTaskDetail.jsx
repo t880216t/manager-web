@@ -36,7 +36,7 @@ class InterfaceList extends React.Component{
     fetchTaskDetail=(entry)=>{
         var entry = entry.toString()
         var par = "entry="+entry
-        fetch('http://192.168.0.1:5000/interfaceTaskDetail',{
+        fetch('http://127.0.0.1:5000/interfaceTaskDetail',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -69,7 +69,7 @@ class InterfaceList extends React.Component{
     fetchList=(entry)=>{
         var entry = entry.toString()
         var par = "entry="+entry
-        fetch('http://192.168.0.1:5000/interfaceList',{
+        fetch('http://127.0.0.1:5000/interfaceList',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -162,7 +162,7 @@ class InterfaceList extends React.Component{
     //生成测试任务
     fetchTask =()=>{
         var par = "entry="+this.state.selectedRowEntry+"&task_name="+this.state.task_name+"&create_user="+this.state.userName+'&base_host='+this.state.base_host
-        fetch('http://192.168.0.1:5000/addInterfaceTask',{
+        fetch('http://127.0.0.1:5000/addInterfaceTask',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -227,7 +227,7 @@ class InterfaceList extends React.Component{
 
     fetchClone=()=>{
         var par = "entry="+this.state.cloneEntry+"&clone_task_name="+this.state.clone_task_name
-        fetch('http://192.168.0.1:5000/cloneInterface',{
+        fetch('http://127.0.0.1:5000/cloneInterface',{
             method: "POST",
             mode: "cors",
             headers: {
@@ -278,7 +278,7 @@ class InterfaceList extends React.Component{
     clickDelete =(entry)=>{
         if(entry){
             var par = "entry="+entry
-            fetch('http://192.168.0.1:5000/deleteInterface',{
+            fetch('http://127.0.0.1:5000/deleteInterface',{
                 method: "POST",
                 mode: "cors",
                 headers: {

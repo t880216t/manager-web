@@ -5,11 +5,21 @@ import Page from 'framework/page'
 import {local, session} from 'common/util/storage.js'
 import {hashHistory} from 'react-router'
 
-class Demo extends React.Component {
+class CaseUpload extends React.Component {
     state = {
         fileList: [],
         uploading: false,
         isLoading:false,
+        userID:'',
+        userName:'',
+    }
+
+    componentDidMount(){
+        const userInfo = session.get('userInfo') || {userID: 0}
+        this.setState({
+            userID : userInfo.userID,
+            userName : userInfo.userName,
+        })
     }
 
     handleUpload = () => {
@@ -17,28 +27,29 @@ class Demo extends React.Component {
         const formData = new FormData();
         fileList.forEach((file) => {
             formData.append('file', file);
+            formData.append('userID', this.state.userID);
         });
 
         this.setState({
             uploading: true,
         });
 
-        fetch("http://192.168.1.101:5000/upload", {
+        fetch("http://127.0.0.1:5000/upload", {
             method: "POST",
             //设置请求头，请求体为json格式，identity为未压缩
             headers: {},
             body: formData,
         }).then((response) => response.json())
             .then((responseData)=> {
-            if(responseData.code === 0){
-                this.setState({
-                    uploading: false,
-                },()=>{message.success(responseData.msg)});
-            }else {
-                this.setState({
-                    uploading: false,
-                },()=>{message.error(responseData.msg)});
-            }
+                if(responseData.code === 0){
+                    this.setState({
+                        uploading: false,
+                    },()=>{message.success(responseData.msg)});
+                }else {
+                    this.setState({
+                        uploading: false,
+                    },()=>{message.error(responseData.msg)});
+                }
             }).catch((error)=> {
             this.setState({
                 uploading: false,
@@ -52,7 +63,7 @@ class Demo extends React.Component {
 
         // // You can use any AJAX library you like
         // reqwest({
-        //     url: '//192.168.1.101:5000/upload',
+        //     url: '//127.0.0.1:5000/upload',
         //     method: 'post',
         //     processData: false,
         //     data: formData,
@@ -75,7 +86,7 @@ class Demo extends React.Component {
     render() {
         const { uploading } = this.state;
         const props = {
-            action: '//192.168.1.101:5000/upload',
+            action: '//127.0.0.1:5000/upload',
             onRemove: (file) => {
                 this.setState(({ fileList }) => {
                     const index = fileList.indexOf(file);
@@ -121,4 +132,4 @@ class Demo extends React.Component {
 }
 
 
-export default Demo;
+export default CaseUpload;
