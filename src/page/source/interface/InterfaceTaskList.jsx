@@ -109,29 +109,78 @@ class InterfaceList extends React.Component{
             })
     }
 
-    getStateButton =(entry,task_status)=>{
-        if (task_status === 0  ){
-            return(<span><Button value={entry} onClick={this.clickExec}>待执行</Button></span>)
-        }
-        else if (task_status === 1){
-            return(<span><Button value={entry}>正在执行</Button></span>)
-        }
-        else if (task_status === 3){
-            return(<span><Button value={entry} >已完成</Button></span>)
-        }
-        else{
-            return(<span><Button value={entry} >未知状态</Button></span>)
+    //关闭定时任务
+    closeSetTimeTask =(entry)=>{
+        if(entry){
+            var par = "taskId="+entry
+            fetch('http://127.0.0.1:5000/closeSetTimeTask',{
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: par
+            }).then((response) => {
+                return response.json()}) //把response转为json
+                .then((responseData) => { // 上面的转好的json
+                    if (responseData.code === 0) {
+                        message.success(responseData.msg)
+                        this.fetchList()
+                    } else {
+                        message.error(responseData.msg)
+                    }
+                })
+                .catch((error)=> {
+                    if (error.statusText){
+                        message.error(error.statusText)
+                    }else{
+                        message.error("网络异常，请检查您的办公网络！")
+                    }
+                })
+        }else{
+            message.warning("没点上，再试试！")
         }
 
     }
 
-    getReportUrl=(entry,task_status)=>{
-        const url = "http://127.0.0.1:5000/static/interface_auto/test_src/"+entry+"/result/result.html"
-        if (task_status === 3){
-            return(<a href={url} target="_blank">查看报告</a>)
+    getStateButton =(entry,task_status,is_settime_task,settime_task_status)=>{
+        if (is_settime_task===1){
+            if(settime_task_status===1){
+                return(
+                    <Popconfirm title="确认关闭该定时任务?" onConfirm={() => this.closeSetTimeTask(entry)}>
+                        <span><Button value={entry}>定时任务执行中</Button></span>
+                    </Popconfirm>
+                )
+            }else{
+                return(<span><Button value={entry}>已关闭定时任务</Button></span>)
+            }
+        }else {
+            if (task_status === 0){
+                return(<span><Button value={entry} onClick={this.clickExec}>待执行</Button></span>)
+            }
+            else if (task_status === 1){
+                return(<span><Button value={entry}>正在执行</Button></span>)
+            }
+            else if (task_status === 3){
+                return(<span><Button value={entry} >已完成</Button></span>)
+            }
+            else{
+                return(<span><Button value={entry} >未知状态</Button></span>)
+            }
         }
-        else{
-            return(<span></span>)
+    }
+
+    getReportUrl=(entry,task_status,is_settime_task,start_time)=>{
+        if(is_settime_task===1){
+            return(<span>{start_time}</span>)
+        }else {
+            const url = "http://127.0.0.1:5000/static/interface_auto/test_src/"+entry+"/result/result.html"
+            if (task_status === 3){
+                return(<a href={url} target="_blank">查看报告</a>)
+            }
+            else{
+                return(<span></span>)
+            }
         }
     }
 
@@ -176,17 +225,20 @@ class InterfaceList extends React.Component{
             render: (text, record) => {
                 const entry = record.entry
                 const task_status = record.task_status
-                return(this.getStateButton(entry,task_status))
+                const is_settime_task = record.is_settime_task
+                const settime_task_status = record.settime_task_status
+                return(this.getStateButton(entry,task_status,is_settime_task,settime_task_status))
             },
         }, {
-            title: '结果',
+            title: '备注',
             dataIndex: '',
             key: '',
             render: (text, record) => {
                 const entry = record.entry
                 const task_status = record.task_status
-
-                return(this.getReportUrl(entry,task_status))}
+                const is_settime_task = record.is_settime_task
+                const start_time = record.start_time
+                return(this.getReportUrl(entry,task_status,is_settime_task,start_time))}
         }];
 
         return(

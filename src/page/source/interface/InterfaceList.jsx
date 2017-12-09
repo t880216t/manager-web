@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Table, Select,Button,message,Popconfirm,Modal,Input} from 'antd';
+import { Table, Select,Button,message,Popconfirm,Modal,Input,Switch} from 'antd';
 import 'whatwg-fetch';
 import Page from 'framework/page'
 import {local, session} from 'common/util/storage.js'
@@ -23,8 +23,11 @@ class InterfaceList extends React.Component{
         clone_task_name:'',
         project:'mic_buyer_app',
         datatype:'test',
-
-
+        is_settime_task:0,
+        hour:'00',
+        minune:'00',
+        hours:['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
+        minunes:['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59'],
     }
 
     componentDidMount(){
@@ -135,7 +138,7 @@ class InterfaceList extends React.Component{
 
     //生成测试任务
     fetchTask =()=>{
-        var par = "entry="+this.state.selectedRowEntry+"&task_name="+this.state.task_name+"&create_user="+this.state.userName+'&base_host='+this.state.base_host
+        var par = "entry="+this.state.selectedRowEntry+"&task_name="+this.state.task_name+"&create_user="+this.state.userName+'&base_host='+this.state.base_host+'&is_settime_task='+this.state.is_settime_task.toString()+'&start_time='+this.state.hour+':'+this.state.minune
         fetch('http://127.0.0.1:5000/addInterfaceTask',{
             method: "POST",
             mode: "cors",
@@ -289,6 +292,31 @@ class InterfaceList extends React.Component{
         })
     }
 
+    //是否为定时任务
+    isSetTimeTask = (e) =>{
+        if (this.state.is_settime_task === 0){
+            this.setState({
+                is_settime_task: 1
+            },()=>{console.log('is_settime_task :',this.state.is_settime_task)})
+        }else {
+            this.setState({
+                is_settime_task:0,
+                hour:'00',
+                minune:'00',
+            },()=>{console.log('is_settime_task :',this.state.is_settime_task)})
+        }
+    }
+
+    //定时任务：时
+    handleHourChange = (value) => {
+        this.setState({ hour: value },()=>{console.log('hour',this.state.hour)});
+    }
+
+    //定时任务：分
+    handleMinuneChange = (value) => {
+        this.setState({ minune: value },()=>{console.log('minune',this.state.minune)});
+    }
+
     render(){
         const { project,isShowCloneModal,fetch_data,isVisibleModal,isConfirmLoading,datatype } = this.state;
         const keys = []
@@ -377,6 +405,46 @@ class InterfaceList extends React.Component{
                            style={{ marginTop:20}}
                            placeholder="请输入接口域名或IP，eg: 'http://app.made-in-china.com'"
                     />
+                    <div style={{display:'flex',flexDirection:'row',marginTop:10}}>
+                        <div style={{display:'flex',justifyContent:'flex-end',alignItems:'center'}}>
+                                <span style={{marginRight:30,fontSize:15,whiteSpace:'nowrap',display:'flex',flexDirection:'row'}}>
+                                    定时任务 :
+                                </span>
+                        </div>
+                        <div style={{display:'flex',flexDirection:'row',flex:6}}>
+                            <div style={{marginLeft:10,padding:3}}>
+                                <Switch onChange={(e)=>this.isSetTimeTask(e)}></Switch>
+                            </div>
+                        </div>
+                    </div>
+                    {this.state.is_settime_task===1?
+                        <div style={{display:'flex',flexDirection:'row',marginTop:10}}>
+                            <div style={{display:'flex',justifyContent:'flex-end',alignItems:'center'}}>
+                                    <span style={{marginRight:30,fontSize:15,whiteSpace:'nowrap',display:'flex',flexDirection:'row'}}>
+                                        执行时间 :
+                                    </span>
+                            </div>
+                            <div style={{display:'flex',flexDirection:'row',flex:6}}>
+                                <Select  defaultValue={this.state.hour} style={{minWidth: 50}} onChange={this.handleHourChange}>
+                                    {this.state.hours.map((item)=>{
+                                        return(
+                                            <Select.Option key={item} value={item}>{item}</Select.Option>
+                                        )
+                                    })}
+                                </Select>
+                                <h2 style={{marginLeft:10,marginRight:10}}>:</h2>
+                                <Select  defaultValue={this.state.minune} style={{minWidth: 50}} onChange={this.handleMinuneChange}>
+                                    {this.state.minunes.map((item)=>{
+                                        return(
+                                            <Select.Option key={item} value={item}>{item}</Select.Option>
+                                        )
+                                    })}
+                                </Select>
+                            </div>
+                        </div>
+                        :
+                        <div></div>
+                    }
                 </Modal>
                 <Modal title={"请输入新的英文用例名称"}
                        visible={isShowCloneModal}
