@@ -21,13 +21,16 @@ class InterfaceList extends React.Component{
         isShowCloneModal:false,
         cloneEntry:'',
         clone_task_name:'',
-        project:'mic_buyer_app',
-        datatype:'test',
+        project:'',
+        datatype:'release',
         is_settime_task:0,
         hour:'00',
         minune:'00',
         hours:['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
         minunes:['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59'],
+        isAddProject:false,
+        add_project_key:"",
+        projects:[],
     }
 
     componentDidMount(){
@@ -35,12 +38,52 @@ class InterfaceList extends React.Component{
         this.setState({
             userID : userInfo.userID,
             userName : userInfo.userName,
-        },()=> {this.fetchList()})
+        },()=> {
+            this.fetchList()
+            this.fetchPorjectlist()
+        })
+    }
+
+    //获取项目列表
+    fetchPorjectlist=()=>{
+        var par = "userName="+this.state.userName
+        fetch('http://127.0.0.1:5000/projectList',{
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: par
+        }).then((response) => {
+            return response.json()}) //把response转为json
+            .then((responseData) => { // 上面的转好的json
+                if (responseData.code === 0) {
+                    this.setState({
+                        projects:responseData.content
+                    },()=>{console.log('projects',this.state.projects)})
+                }
+                if (responseData.code === 10001) {
+                    this.setState({
+                        projects:[]
+                    })
+                }
+            })
+            .catch((error)=> {
+                if (error.statusText){
+                    message.error(error.statusText)
+                }else{
+                    message.error("网络异常，请检查您的办公网络！")
+                }
+            })
     }
 
     //所属项目
     handleProjectChange = (value) => {
-        this.setState({ project: value },()=>{this.fetchList()});
+        if (value === '+'){
+            this.setState({isAddProject: true},()=>{console.log("isAddProject",this.state.isAddProject)})
+        }else {
+            this.setState({ project: value },()=>{this.fetchList()});
+        }
     }
 
     //数据类型
@@ -98,6 +141,7 @@ class InterfaceList extends React.Component{
         })
     }
 
+    //新建任务单
     handleOk =()=>{
         if(this.state.task_name != ''){
             if(this.state.selectedRowEntry.length >1){
@@ -127,12 +171,28 @@ class InterfaceList extends React.Component{
         }
     }
 
+    //新建项目
+    handleAddProjectOk=()=>{
+        if(this.state.add_project_key != ''){
+            this.setState({
+                isConfirmLoading:true,
+            })
+            this.fetchaddProject()
+        }else {
+            message.warning("请填写项目名称!")
+            this.setState({
+                isConfirmLoading:false,
+            })
+        }
+    }
+
     handleCancel=()=>{
         this.setState({
             isConfirmLoading:false,
             isVisibleModal:false,
             task_name:'',
-            base_host:''
+            base_host:'',
+            isAddProject:false,
         })
     }
 
@@ -164,6 +224,43 @@ class InterfaceList extends React.Component{
                 this.setState({
                     isConfirmLoading:false,
                     isVisibleModal:false
+                })
+                if (error.statusText){
+                    message.error(error.statusText)
+                }else{
+                    message.error("网络异常，请检查您的办公网络！")
+                }
+            })
+    }
+
+    //新建项目
+    fetchaddProject =()=>{
+        var par = "project_key="+this.state.add_project_key+"&create_user="+this.state.userName
+        fetch('http://127.0.0.1:5000/addprojectkey',{
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: par
+        }).then((response) => {
+            return response.json()}) //把response转为json
+            .then((responseData) => { // 上面的转好的json
+                this.setState({
+                    isConfirmLoading:false,
+                    isAddProject:false
+                })
+                if (responseData.code === 0) {
+                    message.success(responseData.msg)
+                    this.fetchPorjectlist()
+                } else {
+                    message.error(responseData.msg)
+                }
+            })
+            .catch((error)=> {
+                this.setState({
+                    isConfirmLoading:false,
+                    isAddProject:false
                 })
                 if (error.statusText){
                     message.error(error.statusText)
@@ -370,10 +467,12 @@ class InterfaceList extends React.Component{
                 <div style={{display:'flex', flexDirection:'row', marginTop:20}}>
                     <div style={{marginLeft:30}}>
                         <Select  defaultValue={project} style={{minWidth: 120, height:28}} onChange={this.handleProjectChange}>
-                            <Select.Option value="mic_buyer_app">MIC BUYER APP</Select.Option>
-                            <Select.Option value="mic_supplier_app">MIC SUPPIER APP</Select.Option>
-                            <Select.Option value="mic_oss_app">MIC OSS APP</Select.Option>
-
+                            <Select.Option value="+">新增项目</Select.Option>
+                            {this.state.projects.map((item)=>{
+                                return(
+                                    <Select.Option value={item.project_key}>{item.project_key}</Select.Option>
+                                )
+                            })}
                         </Select>
                     </div>
                     <div style={{marginLeft:20}}>
@@ -456,6 +555,17 @@ class InterfaceList extends React.Component{
                         onChange = {(value)=>{this.setState({clone_task_name:value.target.value},()=>{console.log('clone_task_name :',this.state.clone_task_name)})}}
                         style={{ marginTop:20}}
                         placeholder="请输入新的英文用例名称"
+                    />
+                </Modal>
+                <Modal title={"请输入项目信息"}
+                       visible={this.state.isAddProject}
+                       onOk={this.handleAddProjectOk}
+                       confirmLoading={isConfirmLoading}
+                       onCancel={this.handleCancel}
+                >
+                    <Input value={this.state.add_project_key} onChange = {(value)=>{this.setState({add_project_key:value.target.value},()=>{console.log('add_project_key :',this.state.add_project_key)})}}
+                           style={{ marginTop:20}}
+                           placeholder="请输项目名称，eg: 'test_key'"
                     />
                 </Modal>
             </Page>
