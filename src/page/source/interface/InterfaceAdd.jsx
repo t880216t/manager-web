@@ -25,6 +25,17 @@ class InterfaceAdd extends React.Component{
         test_description:'',
         isLoading:false,
         autoCompleteItems:[],
+        projects:[],
+    }
+
+    componentDidMount(){
+        const userInfo = session.get('userInfo') || {userID: 0}
+        this.setState({
+            userID : userInfo.userID,
+            userName : userInfo.userName,
+        },()=> {
+            this.fetchPorjectlist()
+        })
     }
 
     //请求方式
@@ -51,6 +62,39 @@ class InterfaceAdd extends React.Component{
         }else {
             message.error('请填写完整数据')
         }
+    }
+
+    //获取项目列表
+    fetchPorjectlist=()=>{
+        var par = "userName="+this.state.userName
+        fetch('http://127.0.0.1:5000/projectList',{
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: par
+        }).then((response) => {
+            return response.json()}) //把response转为json
+            .then((responseData) => { // 上面的转好的json
+                if (responseData.code === 0) {
+                    this.setState({
+                        projects:responseData.content
+                    },()=>{console.log('projects',this.state.projects)})
+                }
+                if (responseData.code === 10001) {
+                    this.setState({
+                        projects:[]
+                    })
+                }
+            })
+            .catch((error)=> {
+                if (error.statusText){
+                    message.error(error.statusText)
+                }else{
+                    message.error("网络异常，请检查您的办公网络！")
+                }
+            })
     }
 
     //发送数据
@@ -311,10 +355,11 @@ class InterfaceAdd extends React.Component{
                             </div>
                             <div style={{display:'flex',flexDirection:'row',flex:6}}>
                                 <Select  defaultValue={project} style={{minWidth: 120}} onChange={this.handleProjectChange}>
-                                    <Select.Option value="mic_buyer_app">MIC BUYER APP</Select.Option>
-                                    <Select.Option value="mic_supplier_app">MIC SUPPIER APP</Select.Option>
-                                    <Select.Option value="mic_oss_app">MIC OSS APP</Select.Option>
-
+                                    {this.state.projects.map((item)=>{
+                                        return(
+                                            <Select.Option value={item.project_key}>{item.project_key}</Select.Option>
+                                        )
+                                    })}
                                 </Select>
                             </div>
                         </div>
