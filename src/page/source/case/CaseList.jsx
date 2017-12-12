@@ -72,7 +72,34 @@ class CaseList extends React.Component{
             })
     }
 
-
+    //置用例状态
+    setCaseStatus=(entry,status)=>{
+        var par = "entry="+entry+"&status="+status.toString()
+        fetch('http://127.0.0.1:5000/settaskstatus',{
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: par
+        }).then((response) => {
+            return response.json()}) //把response转为json
+            .then((responseData) => { // 上面的转好的json
+                if (responseData.code === 0) {
+                    message.success(responseData.msg)
+                    this.fetchList()
+                } else {
+                    message.error(responseData.msg)
+                }
+            })
+            .catch((error)=> {
+                if (error.statusText){
+                    message.error(error.statusText)
+                }else{
+                    message.error("网络异常，请检查您的办公网络！")
+                }
+            })
+    }
 
     render(){
         const { fetch_data} = this.state;
@@ -84,13 +111,16 @@ class CaseList extends React.Component{
             render:  (text, record) => {
                 return(
                     record.status === 2?
-                        <a style={{color:'red',marginLeft:30,fontSize:16}}>{text}</a>
+                        <Popconfirm title="执行结果?" okText="pass" cancelText="fail" onConfirm={()=>{this.setCaseStatus(record.entry,1)}} onCancel={()=>{this.setCaseStatus(record.entry,2)}}>
+                            <a style={{color:'red',marginLeft:30,fontSize:16}}>{text}</a>
+                        </Popconfirm>
                         :
-                        record.status === 1?
-                            <a style={{color:'green',marginLeft:30,fontSize:16}}>{text}</a>
-                            :
+                    record.status === 1?
+                        <a style={{color:'green',marginLeft:30,fontSize:16}}>{text}</a>
+                        :
+                        <Popconfirm title="执行结果?" okText="pass" cancelText="fail" onConfirm={()=>{this.setCaseStatus(record.entry,1)}} onCancel={()=>{this.setCaseStatus(record.entry,2)}}>
                             <a style={{marginLeft:30,fontSize:16}}>{text}</a>
-
+                        </Popconfirm>
                 )}
         }];
 
