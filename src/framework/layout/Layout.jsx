@@ -35,11 +35,6 @@ class Layout extends React.Component {
                 path: 'demo-empty',
                 children: [
                     {
-                        name: '上传case文件',
-                        path: '/source/case-upload',
-                        icon: 'circle'
-                    },
-                    {
                         name: 'case列表',
                         path: '/source/case-list',
                         icon: 'circle'

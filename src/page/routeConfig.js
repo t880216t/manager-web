@@ -8,14 +8,6 @@ export default [
         }
     },
     {
-        path: '/source/case-upload',
-        getComponent: (location, cb) => {
-            require.ensure([], (require) => {
-                cb(null, require('./source/case/CaseUpload.jsx'))
-            })
-        }
-    },
-    {
         path: '/source/case-list',
         getComponent: (location, cb) => {
             require.ensure([], (require) => {
