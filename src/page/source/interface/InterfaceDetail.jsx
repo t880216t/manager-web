@@ -18,6 +18,7 @@ class InterfaceDetail extends React.Component{
         method:'post',
         datatype:'test',
         parms:",,,0,",
+        verif_parms:",,,0,",
         verif_code:'',
         need_save_response:'0',
         need_verif_value:'0',
@@ -107,6 +108,7 @@ class InterfaceDetail extends React.Component{
                         verif_value:DetailContent.verif_value,
                         test_description:DetailContent.test_description,
                         parms:DetailContent.parms,
+                        verif_parms:DetailContent.verif_parms,
                         datatype:DetailContent.datatype,
                     })
                 }
@@ -140,7 +142,7 @@ class InterfaceDetail extends React.Component{
     //格式化上传参数，提交数据
     handleSubmit =()=>{
         if (this.state.entry != ""){
-            if(this.state.test_name != '' && this.state.path != ''&& this.state.verif_code.toString() != '' && this.state.test_description != ''){
+            if(this.state.test_name != '' && this.state.path != ''&& this.state.test_description != ''){
                 this.setState({
                     isLoading:true,
                 },()=>{this.fetchUpdate()})
@@ -155,7 +157,7 @@ class InterfaceDetail extends React.Component{
 
     //发送数据
     fetchUpdate = () =>{
-        var par = 'entry='+this.state.entry+'&test_name='+this.state.test_name+'&path='+this.state.path+'&method='+this.state.method+'&parms='+this.state.parms+'&verif_code='+this.state.verif_code+'&need_save_response='+this.state.need_save_response+'&need_verif_value='+this.state.need_verif_value+'&verif_key='+this.state.verif_key+'&verif_value_from_file='+this.state.verif_value_from_file+'&verif_value='+this.state.verif_value+'&test_description='+this.state.test_description+'&project='+this.state.project+'&datatype='+this.state.datatype
+        var par = 'entry='+this.state.entry+'&test_name='+this.state.test_name+'&path='+this.state.path+'&method='+this.state.method+'&parms='+this.state.parms+'&verif_code='+this.state.verif_code+'&need_save_response='+this.state.need_save_response+'&need_verif_value='+this.state.need_verif_value+'&verif_key='+this.state.verif_key+'&verif_value_from_file='+this.state.verif_value_from_file+'&verif_value='+this.state.verif_value+'&test_description='+this.state.test_description+'&project='+this.state.project+'&datatype='+this.state.datatype+'&verif_parms='+this.state.verif_parms
         console.log('_par:',par)
         fetch('http://127.0.0.1:5000/updateInterface',{
             method: "POST",
@@ -387,9 +389,134 @@ class InterfaceDetail extends React.Component{
 
     }
 
+    //返回值校验key输入获取
+    getVerifParmsKeyInput = (key_index,key_input) =>{
+        var parms_items = this.state.verif_parms
+        parms_items = parms_items.split('|~|')
+        var parms_edit_item = parms_items[key_index]
+        var new_parms_edit_item = parms_edit_item.split(',')
+        new_parms_edit_item[1] = key_input.target.value
+        parms_items[key_index] = new_parms_edit_item.toString()
+        var new_format_item = ""
+        for(var i=0;i<parms_items.length;i++){
+            new_format_item = new_format_item + parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{console.log('new format verif_parms:',this.state.verif_parms)})
+
+    }
+
+    //返回值校验value输入获取
+    getVerifParmsValueInput = (key_index,key_input) =>{
+        var parms_items = this.state.verif_parms
+        parms_items = parms_items.split('|~|')
+        var parms_edit_item = parms_items[key_index]
+        var new_parms_edit_item = parms_edit_item.split(',')
+        new_parms_edit_item[2] = key_input.target.value.replace(/,/g,'#`#')
+        new_parms_edit_item[4] = key_input.target.value.replace(/,/g,'#`#')
+        parms_items[key_index] = new_parms_edit_item.toString()
+        var new_format_item = ""
+        for(var i=0;i<parms_items.length;i++){
+            new_format_item = new_format_item + parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{this.fetchAutoCompleteWords()})
+
+    }
+
+    //返回值校验value输入获取
+    getVerifParmsValueSelect = (key_index,key_input) =>{
+        console.log('key_index:',key_index)
+        console.log('key_input:',key_input)
+        var parms_items = this.state.verif_parms
+        parms_items = parms_items.split('|~|')
+        var parms_edit_item = parms_items[key_index]
+        var new_parms_edit_item = parms_edit_item.split(',')
+        new_parms_edit_item[2] = key_input
+        new_parms_edit_item[4] = key_input
+        parms_items[key_index] = new_parms_edit_item.toString()
+        var new_format_item = ""
+        for(var i=0;i<parms_items.length;i++){
+            new_format_item = new_format_item + parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{console.log('new format verif_parms:',this.state.verif_parms)})
+
+    }
+
+    //获取返回值从保存文件校验参数开关状态
+    getVerifParmsIsValueFromFile = (key_index,e) =>{
+        var parms_items = this.state.verif_parms
+        parms_items = parms_items.split('|~|')
+        var parms_edit_item = parms_items[key_index]
+        var new_parms_edit_item = parms_edit_item.split(',')
+        if (new_parms_edit_item.length < 3){
+            new_parms_edit_item[3] = '1'
+        }else {
+            if(new_parms_edit_item[3] === ""){
+                new_parms_edit_item[3] = '1'
+            }else {
+                if (new_parms_edit_item[3] === '0'){
+                    new_parms_edit_item[3] = '1'
+                }else {
+                    new_parms_edit_item[3] = '0'
+                }
+            }
+        }
+        parms_items[key_index] = new_parms_edit_item.toString()
+        var new_format_item = ""
+        for(var i=0;i<parms_items.length;i++){
+            new_format_item = new_format_item + parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{console.log('new format verif_parms:',this.state.verif_parms)})
+    }
+
+    //删除返回值校验参数key值
+    remove_verif_key = (key_index) =>{
+        const parms_items = this.state.verif_parms
+        const array_parms_items = parms_items.split('|~|')
+        console.log('array_verif_parms_items:',array_parms_items)
+        array_parms_items.splice(key_index,1);
+        console.log('new verif_parms_items:',array_parms_items)
+        var new_format_item = ""
+        for(var i=0;i<array_parms_items.length;i++){
+            new_format_item = new_format_item + array_parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{console.log('new format verif_parms:',this.state.verif_parms)})
+    }
+
+    //增加校验参数
+    add_verif_parms = () =>{
+        const empty_data = ",,,,"
+        var parms_items = this.state.verif_parms
+        var new_parms_items = parms_items.split('|~|')
+        new_parms_items.push(empty_data)
+        var new_format_item = ""
+        for(var i=0;i<new_parms_items.length;i++){
+            new_format_item = new_format_item + new_parms_items[i] + '|~|'
+        }
+        var format_parms = new_format_item.substr(0, new_format_item.length - 3);
+        this.setState({
+            verif_parms:format_parms,
+        },()=>{console.log('new format verif_parms:',this.state.verif_parms)})
+    }
+
     render(){
         const {project,method,datatype } = this.state;
         const parms_items = this.state.parms.split("|~|")
+        const verif_parms_items =this.state.verif_parms.split("|~|")
         return(
             <Page title="用例详情" loading={this.state.isLoading} >
                 <div style={{flex:1,display:'flex',justifyContent:'flex-end',marginRight:50,}}>
@@ -583,68 +710,84 @@ class InterfaceDetail extends React.Component{
                         <div style={styles.input_box}>
                             <div style={styles.input_box_font}>
                                 <span style={styles.input_box_font_text}>
-                                    <p style={{color:'red',marginRight:5}}>*</p>校验code值:
-                                </span>
-                            </div>
-                            <div style={styles.input_box_back}>
-                                <Input
-                                    value={this.state.verif_code}
-                                    onChange = {(value)=>{this.setState({verif_code:value.target.value},()=>{console.log('verif_code :',this.state.verif_code)})}}
-                                    style={{ width: '60%' }}
-                                    placeholder="请输入需要校验的code值，eg：0"
-                                />
-                            </div>
-                        </div>
-
-                        <div style={styles.input_box}>
-                            <div style={styles.input_box_font}>
-                                <span style={styles.input_box_font_text}>
                                     是否校验返回数据:
                                 </span>
                             </div>
                             <div style={{display:'flex',flexDirection:'row',flex:6}}>
                                 <div style={{marginLeft:10,padding:3}}>
-                                    <Switch checked={this.state.need_verif_value==="1"} onChange={(e)=>this.isNeedVerifResponse(e)}></Switch>
+                                    <Switch checked={this.state.need_verif_value ==="1"} onChange={(e)=>this.isNeedVerifResponse(e)}></Switch>
                                 </div>
+                                <Tooltip placement="top"  title={<span>是否需要校验服务端返回值，不开启则默认校验接口请求code小于300为通过</span>}>
+                                    <a style={{marginLeft:10,padding:3}}>提示</a>
+                                </Tooltip>
                             </div>
                         </div>
 
                         {this.state.need_verif_value === '1'?
                             <div style={styles.input_box}>
-                                <div style={styles.input_box_font}>
-                                <span style={styles.input_box_font_text}>
-                                    返回值校验:
+                                <div style={{display:'flex',justifyContent:'flex-end',alignItems:'flex-start'}}>
+                                <span style={{marginRight:30,fontSize:15,whiteSpace:'nowrap',marginTop:10}}>
+                                    校验参数值:
                                 </span>
                                 </div>
-                                <div style={{display:'flex',flexDirection:'row',marginTop:10}}>
-                                    <div>
-                                        <Input
-                                            value={this.state.verif_key}
-                                            onChange = {(value)=>{this.setState({verif_key:value.target.value},()=>{console.log('verif_key :',this.state.verif_key)})}}
-                                            style={{ width: '100%' }}
-                                            placeholder="key"/>
-                                    </div>
-                                    <div style={{marginLeft:10}}>
-                                        {this.state.verif_value_from_file === '0'?
-                                            <Input
-                                                value={this.state.verif_value}
-                                                onChange = {(value)=>{this.setState({verif_value:value.target.value},()=>{console.log('verif_value :',this.state.verif_value)})}}
-                                                style={{ width: '100%' }}
-                                                placeholder="value"/>
-                                            :
-                                            <Input
-                                                value={this.state.verif_value}
-                                                onChange = {(value)=>{this.setState({verif_value:value.target.value},()=>{console.log('verif_value :',this.state.verif_value)})}}
-                                                style={{ width: '100%' }}
-                                                placeholder="value from file path , eg: userInfo.content.companyId "/>}
+                                <div style={styles.input_box_back}>
+                                    {verif_parms_items.map((item_value,index)=>{
+                                        item_value = item_value.split(",")
+                                        return(
+                                            <div style={{display:'flex',flexDirection:'row',marginTop:10}}>
+                                                <div>
+                                                    <Input
+                                                        value={item_value[1]}
+                                                        onChange = {(e)=>this.getVerifParmsKeyInput(index,e)}
+                                                        style={{ width: '100%' }}
+                                                        placeholder="key"/>
+                                                </div>
+                                                <div style={{marginLeft:10}}>
+                                                    {item_value[3]==="1"?
+                                                        <Autocomplete
+                                                            getItemValue={(item) => item.label}
+                                                            items={this.state.autoCompleteItems}
+                                                            renderItem={(item, isHighlighted) =>
+                                                                <div style={{ background: isHighlighted ? 'lightgray' : 'white',}}>
+                                                                    {item.label}
+                                                                </div>
+                                                            }
+                                                            value={this.fomatStr(item_value[2])}
+                                                            wrapperStyle={{ position: 'relative', display: 'inline-block',zIndex:'99'}}
+                                                            onChange = {(e)=>this.getVerifParmsValueInput(index,e)}
+                                                            onSelect={(e)=>this.getVerifParmsValueSelect(index,e)}
+                                                            inputProps = {{ style:{width: 200,height:28,border:'1px solid #d9d9d9',borderRadius:4}}}
 
+                                                        />
+                                                        :
+                                                        <Input
+                                                            value={this.fomatStr(item_value[2])}
+                                                            onChange = {(e)=>this.getVerifParmsValueInput(index,e)}
+                                                            style={{ width: 200 }}
+                                                            placeholder="value"/>
+                                                    }
+
+                                                </div>
+                                                <div style={{marginLeft:10,padding:3}}>
+                                                    <Switch checked={item_value[3]==="1"} onChange={(e)=>this.getVerifParmsIsValueFromFile(index,e)}></Switch>
+                                                </div>
+                                                <Tooltip placement="top"  title={<span>是否需要从保存数据中取参数值:  开启开关,则value取保存数据的指定字段,eg: 'login.companyInfo.companyId'</span>}>
+                                                    <a style={{marginLeft:10,padding:3}}>提示</a>
+                                                </Tooltip>
+                                                <div style={{marginLeft:10,padding:3}}>
+                                                    {verif_parms_items.length > 1 ?
+                                                        <Icon type="minus-circle-o" onClick={() => this.remove_verif_key(index)}></Icon>:<div/>}
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+
+                                    <div style={{marginTop:20}}>
+                                        <Button type="dashed" onClick={this.add_verif_parms} style={{ width: '60%' }}>
+                                            <Icon type="plus" /> 新增参数
+                                        </Button>
                                     </div>
-                                    <div style={{marginLeft:10,padding:3}}>
-                                        <Switch checked={this.state.verif_value_from_file==='1'} onChange={(e)=>this.isNeedVerifFromFile(e)}></Switch>
-                                    </div>
-                                    <Tooltip placement="top"  title={<span>是否需要从保存数据中取value值:  开启开关,则value取保存数据的指定字段,eg: 'login.companyInfo.companyId'</span>}>
-                                        <a style={{marginLeft:10,padding:3}}>提示</a>
-                                    </Tooltip>
+
                                 </div>
                             </div>
                             :
