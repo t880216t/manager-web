@@ -148,7 +148,7 @@ class InterfaceList extends React.Component{
             if(settime_task_status===1){
                 return(
                     <Popconfirm title="确认关闭该定时任务?" onConfirm={() => this.closeSetTimeTask(entry)}>
-                        <span><Button value={entry}>定时任务执行中</Button></span>
+                        <span><Button value={entry} style={{backgroundColor:'#3385ff',color:'#fff', fontSize:14}}>定时任务执行中</Button></span>
                     </Popconfirm>
                 )
             }else{
@@ -156,13 +156,13 @@ class InterfaceList extends React.Component{
             }
         }else {
             if (task_status === 0){
-                return(<span><Button value={entry} onClick={this.clickExec}>待执行</Button></span>)
+                return(<span><Button value={entry} onClick={this.clickExec} style={{backgroundColor: '#FF9933',color:'#fff', fontSize:14}}>待执行</Button></span>)
             }
             else if (task_status === 1){
-                return(<span><Button value={entry}>正在执行</Button></span>)
+                return(<span><Button value={entry} style={{backgroundColor:'#3DBB2B',color:'#fff', fontSize:14}}>正在执行</Button></span>)
             }
             else if (task_status === 3){
-                return(<span><Button value={entry} >已完成</Button></span>)
+                return(<span><Button value={entry} style={{backgroundColor:'#3DBB2B',color:'#fff', fontSize:14}}>已完成</Button></span>)
             }
             else{
                 return(<span><Button value={entry} >未知状态</Button></span>)
