@@ -35,9 +35,11 @@ class InterfaceList extends React.Component{
 
     componentDidMount(){
         const userInfo = session.get('userInfo') || {userID: 0}
+        const project = session.get('project')||{select_project:''}
         this.setState({
             userID : userInfo.userID,
             userName : userInfo.userName,
+            project : project.select_project,
         },()=> {
             this.fetchList()
             this.fetchPorjectlist()
@@ -82,7 +84,10 @@ class InterfaceList extends React.Component{
         if (value === '+'){
             this.setState({isAddProject: true},()=>{console.log("isAddProject",this.state.isAddProject)})
         }else {
-            this.setState({ project: value },()=>{this.fetchList()});
+            this.setState({ project: value },()=>{
+                session.set('project', {select_project: value})
+                this.fetchList()
+            });
         }
     }
 
