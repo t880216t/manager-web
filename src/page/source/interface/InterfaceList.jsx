@@ -149,7 +149,7 @@ class InterfaceList extends React.Component{
     //新建任务单
     handleOk =()=>{
         if(this.state.task_name != ''){
-            if(this.state.selectedRowEntry.length >1){
+            if(this.state.selectedRowEntry.length >0){
                 if(this.state.base_host != ''){
                     this.setState({
                         isConfirmLoading:true,
